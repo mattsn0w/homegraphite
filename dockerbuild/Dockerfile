@@ -87,7 +87,7 @@ FROM build as production
 
 # Defaults
 EXPOSE 80 2003-2004 2013-2014 2023-2024 8080 8125 8125/udp 8126
-VOLUME ["/opt/graphite/conf", "/opt/graphite/storage", "/opt/graphite/webapp/graphite/functions/custom", "/etc/nginx", "/opt/statsd/config", "/etc/logrotate.d", "/var/log", "/var/lib/redis"]
+VOLUME ["/opt/graphite/conf", "/opt/graphite/storage", "/opt/graphite/webapp", "/etc/nginx", "/var/log"]
 
 STOPSIGNAL SIGKILL
 
