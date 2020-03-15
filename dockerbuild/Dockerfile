@@ -1,6 +1,6 @@
 FROM ubuntu:latest as base
 
-MAINTAINER Matt Snow matt@slakin.net
+MAINTAINER Matt Snow mattsnow-at-gmail-dot-com
 
 ENV DEBIAN_FRONTEND noninteractive
 
