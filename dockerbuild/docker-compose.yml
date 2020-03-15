@@ -1,0 +1,20 @@
+version: '3'
+services:
+  graphite:
+    image: ubuntu:graphite
+    ports:
+      - '80:80'
+      - '2003-2004:2003-2004'
+      - '2023-2024:2023-2024'
+      - '8080:8080'
+    volumes:
+      - 'graphitestorage:/opt/graphite/storage'
+
+
+volumes:
+  graphitestorage:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: tcp,rw,addr=172.16.1.50
+      device: ':/tanker/docker/graphite/storage'
